@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Adicionar Música</h2>
+<form method="POST">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br>
+
+    <label>Artista:</label><br>
+    <input type="text" name="artista" required><br>
+
+    <label>Álbum:</label><br>
+    <input type="text" name="album"><br>
+
+    <label>Ano de lançamento:</label><br>
+    <input type="text" name="ano"><br><br>
+
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}

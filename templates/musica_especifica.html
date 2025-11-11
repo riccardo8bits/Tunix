@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalhes da Música</h2>
+<p><b>ID:</b> {{ musica.id }}</p>
+<p><b>Nome:</b> {{ musica.nome }}</p>
+<p><b>Artista:</b> {{ musica.artista }}</p>
+<p><b>Álbum:</b> {{ musica.album or '-' }}</p>
+<p><b>Ano de lançamento:</b> {{ musica.ano_lancamento or '-' }}</p>
+
+<a href="{{ url_for('listar_musicas') }}">Voltar para a lista</a>
+{% endblock %}

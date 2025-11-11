@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+
+.navbar {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.pai {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+
+.pai a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.pai a:hover {
+    color: #bbdefb;
+}

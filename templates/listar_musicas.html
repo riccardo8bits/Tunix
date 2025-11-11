@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Lista de Músicas</h2>
+<hr>
+
+{% for musica in musicas %}
+<p>
+    <b>ID:</b> {{ musica.id }}<br>
+    <b>Nome:</b> {{ musica.nome }}<br>
+    <b>Artista:</b> {{ musica.artista }}<br>
+    <b>Álbum:</b> {{ musica.album or '-' }}<br>
+    <b>Ano de lançamento:</b> {{ musica.ano_lancamento or '-' }}<br>
+
+    <a href="{{ url_for('musica_especifica', id_musica=musica.id) }}">Ver detalhes</a>
+
+    <!-- Botão de excluir -->
+    <form action="{{ url_for('deletar_musica', id_musica=musica.id) }}" method="POST" style="display:inline;">
+        <button type="submit">Excluir</button>
+    </form>
+</p>
+<hr>
+{% endfor %}
+
+
+{% endblock %}
