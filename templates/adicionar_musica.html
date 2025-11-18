@@ -2,19 +2,24 @@
 
 {% block content %}
 <h2>Adicionar Música</h2>
-<form method="POST">
-    <label>Nome:</label><br>
-    <input type="text" name="nome" required><br>
+<div>
+    <form method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
 
-    <label>Artista:</label><br>
-    <input type="text" name="artista" required><br>
+        <label>Artista:</label>
+        <input type="text" name="artista" required>
 
-    <label>Álbum:</label><br>
-    <input type="text" name="album"><br>
+        <label>Álbum:</label>
+        <input type="text" name="album">
 
-    <label>Ano de lançamento:</label><br>
-    <input type="text" name="ano"><br><br>
+        <label>Ano de lançamento:</label>
+        <input type="text" name="ano">
 
-    <button type="submit">Salvar</button>
-</form>
+        <label>URL da imagem:</label>
+        <input type="text" name="url_img" required>
+
+        <button type="submit">Salvar</button>
+    </form>
+</div>
 {% endblock %}
