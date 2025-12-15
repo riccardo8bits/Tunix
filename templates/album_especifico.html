@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="paizao">
+    <div class="usuario">
+        <h2>Detalhes do Album</h2>
+        <p><b>ID:</b> {{ albuns.id }}</p>
+        <p><b>Nome:</b> {{ albuns.nome }}</p>
+        <p><b>Artista:</b> {{ albuns.artista }}</p>
+        <p><b>Ano de lançamento</b> {{ albuns.ano_lancamento }}</p>
+        <p><b>Músicas:</b> {{ albuns.nome_musica}}</p>
+
+        <a href="{{ url_for('listar_albuns') }}">Voltar para a lista</a>
+    </div>
+</div>
+{% endblock %}

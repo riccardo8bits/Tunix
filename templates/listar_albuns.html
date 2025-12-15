@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="paizao">
+    <h2>Lista de Albuns</h2>
+    <hr>
+    <div class="card_1">
+
+        {% for albuns in var_albuns %}
+        <div class="item_card">
+            <div class="item-body">
+                <div class="card-img">
+                    <img src="{{ albuns.url_img }}" alt="speaker">
+                </div>
+                <div>
+                    <div>
+                        <b class="n">Nome: {{ albuns.nome }}</b>
+                    </div>
+                    <div><a href="{{ url_for('album_especifico', id_albuns=albuns.id) }}"><i class="bi bi-list">Detalhes</i></a></div>
+
+                    <!-- Botão de excluir -->
+                    <div><a href="{{ url_for('deletar_albuns', id_albuns=albuns.id) }}"><i class="bi bi-trash3">Excluir</i></a></div>
+
+                    <div><a href="{{ url_for('editar_albuns', id_albuns=albuns.id ) }}"><i class="bi bi-pencil-square">Editar</i></a></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="paizao">
+    <h2>Lista de Músicas</h2>
+    <hr>
+    <div class="card_1">
+
+        {% for musica in var_musicas %}
+        <div class="item_card">
+            <div class="item-body">
+                <div class="card-img">
+                    <img src="{{ musica.url_img }}" alt="speaker">
+                </div>
+                <div>
+                    <div>
+                        <b class="n">Nome: {{ musica.nome }}</b>
+                    </div>
+                    <a href="{{ url_for('musica_especifica', id_musica=musica.id) }}"><i class="bi bi-list">Detalhes</i></a>
+
+                    <a href="{{ url_for('deletar_musica', id_musica=musica.id) }}"><i class="bi bi-trash3">Excluir</i></a>
+
+                    <a href="{{ url_for('editar_musica', id_musica=musica.id ) }}"><i class="bi bi-pencil-square">Editar</i></a>
+
+                    <a href="{{ url_for('avaliacao', id_musica=musica.id ) }}"><i class="bi bi-suit-heart-fill">Curtir</i></a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

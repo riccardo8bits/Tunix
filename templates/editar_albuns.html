@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="paizao">
+    <h2>Editar Album</h2>
+
+    <form action="{{ url_for('editar_albuns', id_albuns=albuns.id) }}" method="POST">
+
+        <p>Nome:</p>
+        <input type="text" name="nome" value="{{ albuns.nome }}" required>
+
+        <p>Artista:</p>
+        <input type="text" name="artista" value="{{ albuns.artista }}" required>
+
+        <p>Ano de lançamento:</p>
+        <input type="text" name="ano" value="{{ albuns.ano_lancamento }}">
+
+        <p>Músicas:</p>
+        <input type="text" name="nome_musica" value="{{ albuns.nome_musica }}">
+
+        <br><br>
+        <button type="submit">Salvar alterações</button>
+    </form>
+</div>
+{% endblock %}

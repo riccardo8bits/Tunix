@@ -2,24 +2,49 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding: 0;
+    background-color: #000000;
+    color: white;
+}
+.paizao{
+    width:  99%;
+    background-color: black;
+}
+.navbar {
+    background: linear-gradient(90deg, #000000, #04ff21);
+    padding: 10px 20px;
 }
 
-
-.navbar {
-    background: linear-gradient(90deg, #666666, #faefdc);
+.conteudo {
+    background: linear-gradient(150deg, #000000, #04ff21);
     color: white;
     padding: 10px 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: 670px;
+    width: 97.4%;
 }
 
+.usuario{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    align-items:  center;
+    flex-direction:  column;
+}
 
 .navbar h1 {
     margin: 0;
     font-size: 22px;
 }
-
+i{
+    width: 10%;
+    font-size: larger;
+    margin: max(30px);
+    border: 1px solid black;
+    display: flex;
+}
 
 .pai {
     list-style: none;
@@ -27,17 +52,29 @@ body {
     padding: 0;
     display: flex;
     gap: 20px;
+    flex-direction: column;
+    width: 20%;
 }
-
 
 .pai a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
-
 
 .pai a:hover {
-    color: #bbdefb;
+    color: #0e540e;
 }
+
+.letras {
+    display: flex;
+    flex-direction: column;
+}
+i {
+    color: #0e540e;
+}
+

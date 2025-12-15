@@ -3,8 +3,8 @@
 {% block content %}
 <div class="paizao">
     <div class="usuario">
-        <h2>Adicionar Música</h2>
-        <div>
+        <h2>Adicionar Album</h2>
+        <div class="form">
             <form method="POST">
                 <label>Nome:</label>
                 <input type="text" name="nome" required>
@@ -12,15 +12,11 @@
                 <label>Artista:</label>
                 <input type="text" name="artista" required>
 
-                <label>Álbum:</label>
-                <input type="text" name="album">
-
                 <label>Ano de lançamento:</label>
                 <input type="text" name="ano">
 
-                <label>Letras:</label>
-                <textarea name="letras" cols="30" rows="10"></textarea>
-
+                <label>Músicas:</label>
+                <input type="text" name="nome_musica">
 
                 <label>URL da imagem:</label>
                 <input type="text" name="url_img" required>

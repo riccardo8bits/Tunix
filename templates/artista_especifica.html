@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="paizao">
+    <div class="usuario">
+        <h2>Detalhes do artista</h2>
+        <p><b>ID:</b> {{ artista.id }}</p>
+        <p><b>Nome:</b> {{ artista.nome }}</p>
+        <p><b>Sobrenome:</b> {{ artista.sobrenome }}</p>
+        <p><b>Data_nascimento:</b> {{ artista.data_nascimento }}</p>
+
+        <a href="{{ url_for('listar_artistas') }}">Voltar para a lista</a>
+    </div>
+</div>
+{% endblock %}

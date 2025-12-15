@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="paizao">
+    <h2>Lista de Artistas</h2>
+    <hr>
+    <div class="card_1">
+
+        {% for artista in var_artistas %}
+        <div class="item_card">
+            <div class="item-body">
+                <div class="card-img">
+                    <img src="{{ artista.url_img }}" alt="speaker">
+                </div>
+                <div>
+                    <div>
+                        <b class="n">Nome: {{ artista.nome }}</b>
+                        <b class="n">Sobrenome: {{ artista.sobrenome }}</b>
+                    </div>
+                    <a href="{{ url_for('artista_especifica', id_artista=artista.id) }}"><i class="bi bi-list">Detalhes</i></a>
+
+                    <!-- Botão de excluir -->
+                    <a href="{{ url_for('deletar_artista', id_artista=artista.id) }}"><i class="bi bi-trash3">Excluir</i></a>
+
+                    <a href="{{ url_for('editar_artista', id_artista=artista.id ) }}"><i class="bi bi-pencil-square">Editar</i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

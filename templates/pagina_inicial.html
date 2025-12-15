@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="paizao">
+    <h2>Músicas mais curtidas</h2>
+
+    <ul>
+        {% for musica in musicas %}
+        <li>
+            {{ musica.nome }}
+            {{ musica.curtidas }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
